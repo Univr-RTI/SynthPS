@@ -1,0 +1,19 @@
+for i=1:3
+    
+    mkdir(['MMObject' num2str(i) '_8'])
+    mkdir(['MMObject' num2str(i) '_8jpg'])
+    mkdir(['MMObject' num2str(i) '_8NL'])
+    mkdir(['MMObject' num2str(i) '_16Reconv'])
+    
+  fname = ['MMObject' num2str(i) '/material' num2str(u) '/image' num2str(i,'%02d') '.png']
+  
+  image=imread(fname);
+   imf=im2double(image);
+   img = imadjust(imf,[],[],0.4545);
+ 
+   oname = ['MMObject' num2str(i) '_16Reconv/image' num2str(i,'%02d') '.png']
+    imwrite(img,oname);
+    
+   oname = ['MMObject' num2str(i) '_16Reconv/image' num2str(i,'%02d') '.png']
+    imwrite(img,oname);
+end
