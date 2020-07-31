@@ -19,7 +19,7 @@ for k=1:9
    imf=im2double(image);
    
       oname = ['Object' num2str(i) '_8/material' num2str(k) '/image' num2str(u,'%02d') '.png']
-    imwrite(image,oname);
+    imwrite(imf,oname);
     
    img = imadjust(imf,[],[],1/2.2);
    oname = ['Object' num2str(i) '_8NL/material' num2str(k) '/image' num2str(u,'%02d') '.png']
